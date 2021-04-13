@@ -5,20 +5,7 @@ import React, { useState } from "react";
 
 function App() {
   const [StateTrackers, setTrackers] = useState({});
-  // console.log(StateTrackers);
-  // let test = {
-  //   test: {
-  //     dataNaw: 1616832906,
-  //     dataPause: "",
-  //     pauseState: false,
-  //   },
-  //   test2: {
-  //     dataNaw: 1616832906,
-  //     dataPause: "",
-  //     pauseState: false,
-  //   },
-  // };
-  // console.log(Object.keys(test));
+
   return (
     <div className="App">
       <h2>tracker</h2>
