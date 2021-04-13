@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Input from "./input/Input";
+import Tracks from "./tracks/Tracks";
+import React, { useState } from "react";
 
 function App() {
+  const [StateTrackers, setTrackers] = useState({});
+  // console.log(StateTrackers);
+  // let test = {
+  //   test: {
+  //     dataNaw: 1616832906,
+  //     dataPause: "",
+  //     pauseState: false,
+  //   },
+  //   test2: {
+  //     dataNaw: 1616832906,
+  //     dataPause: "",
+  //     pauseState: false,
+  //   },
+  // };
+  // console.log(Object.keys(test));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>tracker</h2>
+      <Input StateTrackers={StateTrackers} setTrackers={setTrackers} />
+      <Tracks StateTrackers={StateTrackers} setTrackers={setTrackers} />
     </div>
   );
 }

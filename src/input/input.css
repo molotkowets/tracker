@@ -1,0 +1,26 @@
+.input {
+  border: solid 1px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.input input {
+  border: none;
+  width: 100%;
+}
+.input input:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+.playIcon {
+  margin: 4px;
+}
+.input button {
+  background: none;
+  border: none;
+  padding: 0;
+}

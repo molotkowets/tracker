@@ -1,0 +1,29 @@
+.track .text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.track p {
+  margin: auto 0;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: solid 1px #8a8a8a;
+  border-top: solid 1px #8a8a8a;
+  background: #fdfdf6;
+}
+.button {
+  display: flex;
+}
+.button button {
+  background: none;
+  border: none;
+  padding: 0;
+  padding-left: 10px;
+}
+.track .time {
+  margin: auto 0 auto auto;
+}
