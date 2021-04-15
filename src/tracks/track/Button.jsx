@@ -5,12 +5,26 @@ import React from "react";
 function Button({ name, track, setTrackers }) {
   function toggleTrack() {
     setTrackers(function (prevState) {
-      return {
-        ...prevState,
+      let ReDataNaw;
+      if (!prevState[name].pauseState) {
+        ReDataNaw = prevState[name].dataNaw;
+      } else {
+        ReDataNaw =
+          new Date().getTime() -
+          (prevState[name].dataPause - prevState[name].dataNaw);
+      }
+
+      const test = {
         [name]: {
-          ...prevState[name],
+          dataNaw: ReDataNaw,
+          dataPause: new Date().getTime(),
           pauseState: !prevState[name].pauseState,
         },
+      };
+      localStorage.setItem("Tracks", JSON.stringify({ ...prevState, ...test }));
+      return {
+        ...prevState,
+        ...test,
       };
     });
   }
@@ -19,6 +33,7 @@ function Button({ name, track, setTrackers }) {
     setTrackers(function (prevState) {
       const newState = { ...prevState };
       delete newState[name];
+      localStorage.setItem("Tracks", JSON.stringify({ ...newState }));
       return newState;
     });
   }

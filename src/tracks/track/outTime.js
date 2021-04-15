@@ -13,7 +13,7 @@ export function getTime(track) {
   console.log(track);
   let durationInMilliseconds;
 
-  if (!track.dataPause) {
+  if (!track.pauseState) {
     durationInMilliseconds = moment.duration(
       new Date().getTime() - track.dataNaw
     );

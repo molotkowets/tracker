@@ -16,13 +16,17 @@ function Input({ setTrackers }) {
 
   function startTrack(prevState) {
     if (value) {
-      return {
-        ...prevState,
+      const test = {
         [value]: {
           dataNaw: new Date().getTime(),
           dataPause: "",
           pauseState: false,
         },
+      };
+      localStorage.setItem("Tracks", JSON.stringify({ ...prevState, ...test }));
+      return {
+        ...prevState,
+        ...test,
       };
     } else {
       alert("Enter track name");
